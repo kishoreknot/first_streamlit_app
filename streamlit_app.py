@@ -22,7 +22,7 @@ streamlit.dataframe(fruits_to_show)
 
 streamlit.header('Fruityvice Fruit advice .... ulala..')
 
-fruit_picked = streamlit.text_input('Enter a fruit to pick from fruityvice:', value = "")
+fruit_picked = streamlit.text_input('Enter a fruit to pick from fruityvice:', value = "watermelon")
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_picked)
 
 #streamlit.text(fruityvice_response.json()) This will be replaced with below formatter code
