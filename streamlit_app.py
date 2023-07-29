@@ -21,7 +21,10 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
 
 streamlit.header('Fruityvice Fruit advice .... ulala..')
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "watermelon")
+
+st.text_input(label, value="", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, args=None, kwargs=None, *, placeholder=None, disabled=False, label_visibility="visible")
+fruit_picked = streamlit.test_input('Enter a fruit to pick from fruityvice:', value = "")
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_picked)
 
 #streamlit.text(fruityvice_response.json()) This will be replaced with below formatter code
 
