@@ -27,6 +27,7 @@ fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_p
 
 #streamlit.text(fruityvice_response.json()) This will be replaced with below formatter code
 
+streamlit.write('Below are the details of fruit ', fruit_picked)
 fruityvice_normailzed_json = pd.json_normalize(fruityvice_response.json())
 streamlit.dataframe(fruityvice_normailzed_json)
 
